@@ -1,0 +1,20 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ blog.title }}</title>
+</head>
+<body style="max-width:1366px;">
+<div style="overflow-x:hidden">
+    <h1>{{ blog.title }}</h1>
+    <div style="border:1px solid black; width:900px; height: 100%;
+     background-color:#99FFCC;margin-left:100px;word-wrap:break-word;">
+        {{ blog.text }}
+    </div>
+    <p style="text-align:right;">{{ blog.date }}</p>
+    <a style="border:1px solid #99FFCC" href="{% url 'del_blog' blog.id %}">Удалить</a>
+    <a href="{% url 'update_blog' blog.id %}">Обновить</a>
+</div>
+</body>
+</html>

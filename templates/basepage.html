@@ -1,0 +1,16 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Блоги</title>
+</head>
+<body>
+<div>
+    <a href="{% url 'add_blog' %}">Добавить статью</a>
+    <ul>
+        <li><a href="{% url 'get_all' %}">Все блоги</a></li>
+    </ul>
+</div>
+</body>
+</html>
